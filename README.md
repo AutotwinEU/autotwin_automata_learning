@@ -70,6 +70,8 @@ The [automata_learner](automata_learner.py) script contains an example of a lear
 - function [delete_automaton][connector_endpoint] deletes nodes representing the learned automaton from the SKG, if
   there already exists one with the same name;
 - function [store_automaton][connector_endpoint] stores the learned automaton into the SKG;
+- function [write_semantic_links][mapper_endpoint] identifies and stores the semantic links between the learned
+  automaton and existing SKG nodes.
 
 ---
 
