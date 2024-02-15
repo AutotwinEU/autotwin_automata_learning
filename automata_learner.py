@@ -1,9 +1,15 @@
 from autotwin_connector import store_automaton, delete_automaton
+from autotwin_mapper import write_semantic_links
 from it.polimi.sha_learning.autotwin_learn import learn_automaton
 
-# Testing automaton learning.
+# 1: Automata Learning experiment.
 learned_sha = learn_automaton('item', '2023-11-04-13-0-0', '2023-11-04-14-2-0')
-# Deletes learned automaton from the SKG, if there already exists one with the same name.
+
+# 2: Delete learned automaton from the SKG, if there already exists one with the same name.
 delete_automaton(learned_sha)
-# Stores the learned automaton into the SKG.
+
+# 3: Store the learned automaton into the SKG.
 store_automaton(learned_sha)
+
+# 4: Create semantic links between learned model and existing SKG nodes.
+write_semantic_links(learned_sha)
