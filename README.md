@@ -67,6 +67,9 @@ The [automata_learner](automata_learner.py) script contains an example of a lear
   - the **start** date of the time window to be considered for event mining, e.g., '2023-11-04-13-0-0';
   - the **end** date of the time window to be considered for event mining, e.g., '2023-11-04-14-2-0';
 
+The learned automaton will be saved in `resources/learned_sha`.
+
+
 ---
 
 *Copyright &copy; 2024 Livia Lestingi*
