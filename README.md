@@ -21,11 +21,11 @@ Dependencies are listed in the [`environment.yml`](environment.yml) file.
 
 This module acts as an orchestrator of the following submodules:
 
-- [`lsha`](submodules/lsha): Automata learning component, specifically implementing algorithm L*_SHA for Stochastic
+- [`lsha`][lsha]: Automata learning component, specifically implementing algorithm L*_SHA for Stochastic
   Hybrid Automata (SHA) learning;
-- [`skg_connector`](submodules/skg_connector): Component performing queries on the SKG to extract data and store the
+- [`skg_connector`][connector]: Component performing queries on the SKG to extract data and store the
   newly created model;
-- [`sha2dt_semantic_mapper`](submodules/sha2dt_semantic_mapper): Component identifying and instructing the storage of
+- [`sha2dt_semantic_mapper`][mapper]: Component identifying and instructing the storage of
   semantic links between learned features and the existing representation of the System Under Learning (e.g., between an
   edge of the learned automaton and the sensor that triggers it).
 
@@ -37,3 +37,7 @@ Upon cloning the repository, run the following commands to initialize the submod
 ---
 
 *Copyright &copy; 2024 Livia Lestingi*
+
+[lsha]: https://github.com/LesLivia/lsha/tree/master
+[connector]: https://github.com/LesLivia/skg_connector
+[mapper]: https://github.com/LesLivia/sha2dt_semantic_mapper
