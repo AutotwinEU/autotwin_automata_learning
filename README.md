@@ -2,7 +2,7 @@
 
 ## Description
 
-Module developed within the [Auto-Twin](https://www.auto-twin-project.eu/) Horizon EU project perform an automata
+Module developed within the [Auto-Twin][autotwin] Horizon EU project perform an automata
 learning experiment with data
 extracted from a System Knowledge Graph (SKG), store the resulting model in the SKG, and create semantic links between
 the learned features and the existing nodes representing the system.
@@ -34,7 +34,7 @@ Upon cloning the repository, run the following commands to initialize the submod
 	git submodule init	
     git submodule update
 
-Note that it is necessary to run `git submodule update` to synchronize the submodules with the corresponding
+Note that it is necessary to run `git submodule update` everytime submodules must synchronize with the corresponding
 repositories.
 
 ## Configuration
@@ -51,11 +51,31 @@ module ([`config.ini`][connector_config]), by default, is set up as follows:
   to [`legoFactory`][connector_schemas], but it can be changed to any value
   from the [`schema`][connector_schemas] folder.
 
+Note that the following must be added to your local `PYTHONPATH` environment variable:
+
+- path to `autotwin_automata_learning`;
+- path to [submodules/lsha](submodules/lsha);
+- path to [submodules/sha2dt_semantic_mapper](submodules/sha2dt_semantic_mapper);
+- path to [submodules/skg_connector](submodules/skg_connector).
+
+## How to use
+
+The [automata_learner](automata_learner.py) script contains an example of a learning procedure for testing purposes:
+
+- function `learn_automaton`[lsha_endpoint] takes as input: 
+  - the **pov**, i.e., a string out of 'item', 'resource', 'plant';
+  - the **start** date of the time window to be considered for event mining, e.g., '2023-11-04-13-0-0';
+  - the **end** date of the time window to be considered for event mining, e.g., '2023-11-04-14-2-0';
+
 ---
 
 *Copyright &copy; 2024 Livia Lestingi*
 
+[autotwin]: https://www.auto-twin-project.eu/
+
 [lsha]: https://github.com/LesLivia/lsha/tree/master
+
+[lsha_endpoint]: https://github.com/LesLivia/lsha/blob/master/it/polimi/sha_learning/autotwin_learn.py
 
 [connector]: https://github.com/LesLivia/skg_connector
 
