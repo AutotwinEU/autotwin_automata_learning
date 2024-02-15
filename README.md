@@ -40,17 +40,16 @@ repositories.
 ## Configuration
 
 The configuration file for the `skg_connector`
-module [`config.ini`](submodules/skg_connector/resources/config/config.ini), by default, is set up as follows:
+module ([`config.ini`][connector_config]), by default, is set up as follows:
 
 - **instance**: name of the .ini file containing the information necessary to connect to the SKG (mainly URI, user, and
-  password). By default, this points to the [`local.ini`](submodules/skg_connector/resources/config/local.ini) file
+  password). By default, this points to the [`local.ini`][connector_config] file
   pointing to a local Neo4j instance with password `12345678`. Should a connection to a connection to a differently
-  parameterized instance be needed, a new file with the same structure
-  as [`local.ini`](submodules/skg_connector/resources/config/local.ini) must be added in the same folder, and parameter
-  **instance** updated to the new name.
+  parameterized instance be needed, a new file with the same structure as [`local.ini`][connector_config] must be added
+  to the same folder, and parameter **instance** accordingly.
 - **schema.name**: identifier of the use case targeted by the automata learning experiment. By default, this is set
-  to [`legoFactory`](submodules/skg_connector/resources/schemas/legoFactory.json), but it can be changed to any value
-  from the [`schema`](submodules/skg_connector/resources/schemas) folder.
+  to [`legoFactory`][connector_schemas], but it can be changed to any value
+  from the [`schema`][connector_schemas] folder.
 
 ---
 
@@ -61,3 +60,7 @@ module [`config.ini`](submodules/skg_connector/resources/config/config.ini), by 
 [connector]: https://github.com/LesLivia/skg_connector
 
 [mapper]: https://github.com/LesLivia/sha2dt_semantic_mapper
+
+[connector_config]: https://github.com/LesLivia/skg_connector/tree/dcf97cff64ae606ab99df94b3446354d4b22045e/resources/config
+
+[connector_schemas]: https://github.com/LesLivia/skg_connector/tree/dcf97cff64ae606ab99df94b3446354d4b22045e/resources/schemas
