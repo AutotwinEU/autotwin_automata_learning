@@ -62,13 +62,14 @@ Note that the following must be added to your local `PYTHONPATH` environment var
 
 The [automata_learner](automata_learner.py) script contains an example of a learning procedure for testing purposes:
 
-- function [learn_automaton][lsha_endpoint] takes as input: 
-  - the **pov**, i.e., a string out of 'item', 'resource', 'plant';
-  - the **start** date of the time window to be considered for event mining, e.g., '2023-11-04-13-0-0';
-  - the **end** date of the time window to be considered for event mining, e.g., '2023-11-04-14-2-0';
-
-The learned automaton will be saved in `resources/learned_sha`.
-
+- function [learn_automaton][lsha_endpoint] takes as input:
+    - the **pov**, i.e., a string out of 'item', 'resource', 'plant';
+    - the **start** date of the time window to be considered for event mining, e.g., '2023-11-04-13-0-0';
+    - the **end** date of the time window to be considered for event mining, e.g., '2023-11-04-14-2-0';
+    - The learned automaton will be saved in `resources/learned_sha`.
+- function [delete_automaton][connector_endpoint] deletes nodes representing the learned automaton from the SKG, if
+  there already exists one with the same name;
+- function [store_automaton][connector_endpoint] stores the learned automaton into the SKG;
 
 ---
 
@@ -82,7 +83,11 @@ The learned automaton will be saved in `resources/learned_sha`.
 
 [connector]: https://github.com/LesLivia/skg_connector
 
+[connector_endpoint]: https://github.com/LesLivia/skg_connector/blob/master/autotwin_connector.py
+
 [mapper]: https://github.com/LesLivia/sha2dt_semantic_mapper
+
+[mapper_endpoint]: https://github.com/LesLivia/sha2dt_semantic_mapper/blob/master/autotwin_mapper.py
 
 [connector_config]: https://github.com/LesLivia/skg_connector/tree/dcf97cff64ae606ab99df94b3446354d4b22045e/resources/config
 
