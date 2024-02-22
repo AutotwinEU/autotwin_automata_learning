@@ -64,8 +64,8 @@ The [automata_learner](automata_learner.py) script contains an example of a lear
 
 - function [learn_automaton][lsha_endpoint] takes as input:
     - the **pov**, i.e., a string out of 'item', 'resource', 'plant';
-    - the **start** date of the time window to be considered for event mining, e.g., '2023-11-04-13-0-0';
-    - the **end** date of the time window to be considered for event mining, e.g., '2023-11-04-14-2-0';
+    - the **start** date of the time window for events, e.g., '2023-11-04-13-0-0';
+    - the **end** date of the time window for events, e.g., '2023-11-04-14-2-0';
     - The learned automaton will be saved in `resources/learned_sha`.
 - function [delete_automaton][connector_endpoint] deletes nodes representing the learned automaton from the SKG, if
   there already exists one with the same name;
