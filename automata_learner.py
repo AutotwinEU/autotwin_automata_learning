@@ -1,5 +1,5 @@
 from autotwin_mapper import write_semantic_links
-from it.polimi.sha_learning.autotwin_learn import learn_automaton
+from sha_learning.autotwin_learn import learn_automaton
 from skg_main.autotwin_connector import store_automaton, delete_automaton
 
 # 1: Automata Learning experiment.
