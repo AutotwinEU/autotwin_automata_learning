@@ -1,4 +1,4 @@
-from autotwin_mapper import write_semantic_links
+from semantic_main.autotwin_mapper import write_semantic_links
 from sha_learning.autotwin_learn import learn_automaton
 from skg_main.autotwin_connector import store_automaton, delete_automaton
 
