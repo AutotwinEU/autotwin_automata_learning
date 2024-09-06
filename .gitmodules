@@ -1,9 +1,0 @@
-[submodule "lsha"]
-	path = submodules/lsha
-	url = https://github.com/LesLivia/lsha.git
-[submodule "sha2dt_semantic_mapper"]
-	path = submodules/sha2dt_semantic_mapper
-	url = https://github.com/LesLivia/sha2dt_semantic_mapper.git
-[submodule "skg_connector"]
-	path = submodules/skg_connector
-	url = https://github.com/LesLivia/skg_connector

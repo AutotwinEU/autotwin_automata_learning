@@ -60,7 +60,7 @@ Note that the following must be added to your local `PYTHONPATH` environment var
 
 ## How to use
 
-The [automata_learner](automata_learner.py) script contains an example of a learning procedure for testing purposes:
+The [automata_learner](autotwin_automata_learning.py) script contains an example of a learning procedure for testing purposes:
 
 - function [learn_automaton][lsha_endpoint] takes as input:
     - the **pov**, i.e., a string out of 'item', 'resource', 'plant';
